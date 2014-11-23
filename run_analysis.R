@@ -62,6 +62,6 @@ dataMeanStd$Subject<-factor(dataMeanStd$Subject)
 
 library(plyr)
 
-dataStep5<-ddply(dataMeanStd, c(Activity, Subject), mean)
+dataStep5<-ddply(dataMeanStd, c("Activity", "Subject"), numcolwise(mean,na.rm = TRUE))
 
 
