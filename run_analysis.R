@@ -69,4 +69,4 @@ tidydata<-melt(dataStep5, id=c("Subject", "Activity"), measure.vars=colnames(dat
 
 colnames(tidydata)<-c("Subject", "Activity", "Signal Type", "Average")
 
-write.table(tidydata, file="tidydata.txt", row.name=FALSE)
+write.table(tidydata, row.name=FALSE)
